@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="mermaid-hair" d="M330 160 C290 200 280 260 300 320 C270 270 250 200 290 150 C310 120 360 110 400 120 C440 110 490 120 510 150 C550 200 530 270 500 320 C520 260 510 200 470 160 C440 190 440 220 440 250 L360 250 C360 220 360 190 330 160 Z"/>
+    <circle data-region-id="mermaid-head" cx="400" cy="220" r="62"/>
+    <path data-region-id="mermaid-crown" d="M365 165 L375 135 L390 160 L400 130 L410 160 L425 135 L435 165 Z"/>
+    <path data-region-id="mermaid-top" d="M350 280 C350 270 450 270 450 280 L450 330 C420 345 380 345 350 330 Z"/>
+    <path data-region-id="mermaid-arm-left" d="M350 300 C310 320 290 360 300 390 C325 375 345 340 355 310 Z"/>
+    <path data-region-id="mermaid-arm-right" d="M450 300 C490 320 510 360 500 390 C475 375 455 340 445 310 Z"/>
+    <path data-region-id="mermaid-tail" d="M360 330 C340 400 340 460 380 500 C400 520 420 500 415 480 C440 470 470 480 500 460 C460 470 430 460 415 440 C450 440 480 420 490 400 C455 415 420 410 400 390 C420 385 440 370 445 350 C420 365 385 365 360 330 Z"/>
+    <path data-region-id="mermaid-shell-1" d="M375 300 C370 285 385 280 392 292 C388 300 380 302 375 300 Z"/>
+    <path data-region-id="mermaid-shell-2" d="M425 300 C430 285 415 280 408 292 C412 300 420 302 425 300 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="380" cy="215" r="8"/>
+    <circle cx="420" cy="215" r="8"/>
+    <path d="M388 240 q12 8 24 0" stroke="#111111" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

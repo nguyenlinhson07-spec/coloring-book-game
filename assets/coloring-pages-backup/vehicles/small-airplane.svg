@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="plane-fuselage" d="M200 300 C200 260 260 250 350 250 L580 250 C620 250 640 275 640 300 C640 325 620 350 580 350 L350 350 C260 350 200 340 200 300 Z"/>
+    <circle data-region-id="plane-nose" cx="640" cy="300" r="30"/>
+    <circle data-region-id="plane-cockpit-window" cx="500" cy="285" r="25"/>
+    <path data-region-id="plane-wing-left" d="M380 260 C360 180 400 140 440 150 C440 190 430 230 420 265 Z"/>
+    <path data-region-id="plane-wing-right" d="M380 340 C360 420 400 460 440 450 C440 410 430 370 420 335 Z"/>
+    <path data-region-id="plane-tail-fin" d="M220 260 C200 210 220 180 250 185 C255 210 250 240 245 265 Z"/>
+    <path data-region-id="plane-tail-wing" d="M230 300 L150 280 L150 320 Z"/>
+    <path data-region-id="plane-propeller" d="M665 270 L680 300 L665 330 L650 300 Z"/>
+  </g>
+</svg>

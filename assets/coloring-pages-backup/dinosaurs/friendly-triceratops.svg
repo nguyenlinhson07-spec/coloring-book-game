@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="trike-frill" d="M280 220 C240 160 300 100 400 100 C500 100 560 160 520 220 C480 190 320 190 280 220 Z"/>
+    <path data-region-id="trike-horn-1" d="M395 150 L400 90 L410 150 Z"/>
+    <path data-region-id="trike-horn-2" d="M340 190 L310 145 L360 200 Z"/>
+    <path data-region-id="trike-horn-3" d="M460 190 L490 145 L440 200 Z"/>
+    <circle data-region-id="trike-head" cx="400" cy="240" r="85"/>
+    <ellipse data-region-id="trike-body" cx="400" cy="440" rx="150" ry="110"/>
+    <ellipse data-region-id="trike-belly" cx="400" cy="450" rx="85" ry="65"/>
+    <ellipse data-region-id="trike-leg-fl" cx="310" cy="530" rx="34" ry="45"/>
+    <ellipse data-region-id="trike-leg-fr" cx="390" cy="540" rx="34" ry="45"/>
+    <ellipse data-region-id="trike-leg-bl" cx="460" cy="540" rx="34" ry="45"/>
+    <ellipse data-region-id="trike-leg-br" cx="530" cy="530" rx="34" ry="45"/>
+    <path data-region-id="trike-tail" d="M545 400 C590 400 620 420 625 450 C595 445 565 430 545 415 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="375" cy="230" r="8"/>
+    <circle cx="425" cy="230" r="8"/>
+    <path d="M390 265 h20" stroke="#111111" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

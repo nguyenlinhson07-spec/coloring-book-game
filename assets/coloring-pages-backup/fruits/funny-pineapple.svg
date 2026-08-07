@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="pineapple-crown-leaf-1" d="M400 130 L370 40 L400 100 Z"/>
+    <path data-region-id="pineapple-crown-leaf-2" d="M400 130 L330 70 L390 115 Z"/>
+    <path data-region-id="pineapple-crown-leaf-3" d="M400 130 L470 70 L410 115 Z"/>
+    <path data-region-id="pineapple-body" d="M320 180 C280 220 270 320 300 420 C330 500 360 540 400 540 C440 540 470 500 500 420 C530 320 520 220 480 180 C420 200 380 200 320 180 Z"/>
+    <path data-region-id="pineapple-diamond-1" d="M340 250 L380 230 L400 270 L360 290 Z"/>
+    <path data-region-id="pineapple-diamond-2" d="M420 230 L460 250 L440 290 L400 270 Z"/>
+    <path data-region-id="pineapple-diamond-3" d="M330 340 L370 320 L390 360 L350 380 Z"/>
+    <path data-region-id="pineapple-diamond-4" d="M410 320 L450 340 L450 380 L410 360 Z"/>
+    <path data-region-id="pineapple-diamond-5" d="M350 420 L390 400 L400 440 L360 450 Z"/>
+    <path data-region-id="pineapple-diamond-6" d="M400 440 L410 400 L450 420 L440 450 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="360" cy="230" r="8"/>
+    <circle cx="440" cy="230" r="8"/>
+  </g>
+</svg>

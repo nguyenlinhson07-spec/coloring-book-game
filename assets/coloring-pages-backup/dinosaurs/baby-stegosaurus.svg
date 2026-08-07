@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <circle data-region-id="stego-head" cx="230" cy="330" r="60"/>
+    <ellipse data-region-id="stego-body" cx="430" cy="380" rx="200" ry="100"/>
+    <ellipse data-region-id="stego-belly" cx="430" cy="420" rx="150" ry="55"/>
+    <path data-region-id="stego-plate-1" d="M300 300 L330 220 L360 300 Z"/>
+    <path data-region-id="stego-plate-2" d="M390 280 L420 190 L450 280 Z"/>
+    <path data-region-id="stego-plate-3" d="M480 280 L510 190 L540 280 Z"/>
+    <path data-region-id="stego-plate-4" d="M560 300 L590 220 L610 300 Z"/>
+    <path data-region-id="stego-tail" d="M620 400 C690 400 740 420 750 450 C700 450 650 435 615 415 Z"/>
+    <ellipse data-region-id="stego-leg-fl" cx="330" cy="460" rx="30" ry="42"/>
+    <ellipse data-region-id="stego-leg-fr" cx="400" cy="470" rx="30" ry="42"/>
+    <ellipse data-region-id="stego-leg-bl" cx="480" cy="470" rx="30" ry="42"/>
+    <ellipse data-region-id="stego-leg-br" cx="550" cy="460" rx="30" ry="42"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="215" cy="320" r="7"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="basket-handle" d="M280 350 C280 260 320 220 400 220 C480 220 520 260 520 350" fill="none"/>
+    <path data-region-id="basket-body" d="M220 360 L580 360 L540 500 C530 520 470 530 400 530 C330 530 270 520 260 500 Z"/>
+    <path data-region-id="basket-weave" d="M250 400 L560 400 M240 440 L570 440 M230 480 L580 480" fill="none" stroke-width="5"/>
+    <circle data-region-id="basket-apple" cx="330" cy="300" r="55"/>
+    <path data-region-id="basket-banana" d="M420 310 C440 260 500 240 540 260 C520 300 470 330 430 335 Z"/>
+    <ellipse data-region-id="basket-orange" cx="480" cy="330" rx="45" ry="45"/>
+    <circle data-region-id="basket-grape-bunch" cx="380" cy="230" r="50"/>
+    <path data-region-id="basket-leaf" d="M330 240 C340 210 370 200 385 215 C370 230 345 240 330 240 Z"/>
+  </g>
+  <g fill="#111111">
+  </g>
+</svg>

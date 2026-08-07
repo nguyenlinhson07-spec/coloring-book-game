@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="apple-leaf" d="M420 140 C440 110 480 110 490 140 C470 150 440 150 420 140 Z"/>
+    <path data-region-id="apple-stem" d="M405 100 C405 130 410 150 415 165 C420 150 420 125 418 100 Z"/>
+    <path data-region-id="apple-body" d="M400 190 C280 190 220 290 240 390 C255 470 320 520 400 520 C480 520 545 470 560 390 C580 290 520 190 400 190 Z"/>
+    <ellipse data-region-id="apple-highlight" cx="330" cy="290" rx="30" ry="45"/>
+    <circle data-region-id="apple-blush-left" cx="300" cy="400" r="30"/>
+    <circle data-region-id="apple-blush-right" cx="500" cy="400" r="30"/>
+    <path data-region-id="apple-bottom" d="M340 480 C360 505 440 505 460 480 C430 500 370 500 340 480 Z"/>
+    <ellipse data-region-id="apple-dimple" cx="400" cy="500" rx="18" ry="10"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="360" cy="340" r="10"/>
+    <circle cx="440" cy="340" r="10"/>
+    <path d="M370 380 q30 25 60 0" stroke="#111111" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

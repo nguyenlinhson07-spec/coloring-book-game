@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="watermelon-rind" d="M180 300 C180 180 280 130 400 130 C520 130 620 180 620 300 C500 340 300 340 180 300 Z"/>
+    <path data-region-id="watermelon-flesh" d="M210 300 C220 210 300 165 400 165 C500 165 580 210 590 300 C480 330 320 330 210 300 Z"/>
+    <path data-region-id="watermelon-stripe-1" d="M260 190 C240 220 230 260 235 295" fill="none"/>
+    <path data-region-id="watermelon-stripe-2" d="M400 165 C395 210 395 260 400 300" fill="none"/>
+    <path data-region-id="watermelon-stripe-3" d="M540 190 C560 220 570 260 565 295" fill="none"/>
+    <circle data-region-id="watermelon-seed-1" cx="320" cy="230" r="10"/>
+    <circle data-region-id="watermelon-seed-2" cx="400" cy="250" r="10"/>
+    <circle data-region-id="watermelon-seed-3" cx="480" cy="230" r="10"/>
+    <circle data-region-id="watermelon-seed-4" cx="350" cy="280" r="10"/>
+    <circle data-region-id="watermelon-seed-5" cx="450" cy="280" r="10"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="340" cy="300" r="9"/>
+    <circle cx="460" cy="300" r="9"/>
+    <path d="M360 320 q40 30 80 0" stroke="#111111" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

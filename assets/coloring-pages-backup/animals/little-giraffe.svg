@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="giraffe-horn-left" d="M375 100 C370 75 375 55 385 55 C392 70 392 90 388 110 Z"/>
+    <path data-region-id="giraffe-horn-right" d="M425 100 C430 75 425 55 415 55 C408 70 408 90 412 110 Z"/>
+    <path data-region-id="giraffe-ear-left" d="M345 130 C315 120 300 145 320 165 C335 160 345 145 345 130 Z"/>
+    <path data-region-id="giraffe-ear-right" d="M455 130 C485 120 500 145 480 165 C465 160 455 145 455 130 Z"/>
+    <circle data-region-id="giraffe-head" cx="400" cy="150" r="65"/>
+    <path data-region-id="giraffe-neck" d="M355 200 C345 280 350 350 365 410 L435 410 C450 350 455 280 445 200 Z"/>
+    <ellipse data-region-id="giraffe-body" cx="400" cy="470" rx="130" ry="95"/>
+    <ellipse data-region-id="giraffe-spot-1" cx="360" cy="250" r="18"/>
+    <ellipse data-region-id="giraffe-spot-2" cx="440" cy="300" r="20"/>
+    <ellipse data-region-id="giraffe-spot-3" cx="380" cy="440" r="22"/>
+    <ellipse data-region-id="giraffe-leg-fl" cx="330" cy="555" rx="24" ry="45"/>
+    <ellipse data-region-id="giraffe-leg-fr" cx="380" cy="560" rx="24" ry="45"/>
+    <ellipse data-region-id="giraffe-leg-bl" cx="430" cy="560" rx="24" ry="45"/>
+    <ellipse data-region-id="giraffe-leg-br" cx="480" cy="555" rx="24" ry="45"/>
+    <path data-region-id="giraffe-tail" d="M525 420 C550 440 555 480 545 500 C532 485 525 450 520 420 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="378" cy="145" r="8"/>
+    <circle cx="422" cy="145" r="8"/>
+    <ellipse cx="400" cy="175" rx="8" ry="6"/>
+  </g>
+</svg>

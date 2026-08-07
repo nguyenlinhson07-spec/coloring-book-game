@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="cow-horn-left" d="M340 150 C320 110 330 90 350 95 C355 120 355 145 350 165 Z"/>
+    <path data-region-id="cow-horn-right" d="M460 150 C480 110 470 90 450 95 C445 120 445 145 450 165 Z"/>
+    <path data-region-id="cow-ear-left" d="M295 220 C260 210 250 250 280 270 C300 260 310 240 305 220 Z"/>
+    <path data-region-id="cow-ear-right" d="M505 220 C540 210 550 250 520 270 C500 260 490 240 495 220 Z"/>
+    <circle data-region-id="cow-head" cx="400" cy="270" r="108"/>
+    <ellipse data-region-id="cow-snout" cx="400" cy="330" rx="60" ry="40"/>
+    <ellipse data-region-id="cow-body" cx="400" cy="460" rx="150" ry="115"/>
+    <circle data-region-id="cow-spot-1" cx="340" cy="420" r="28"/>
+    <circle data-region-id="cow-spot-2" cx="460" cy="470" r="34"/>
+    <ellipse data-region-id="cow-leg-fl" cx="310" cy="560" rx="28" ry="35"/>
+    <ellipse data-region-id="cow-leg-fr" cx="380" cy="565" rx="28" ry="35"/>
+    <ellipse data-region-id="cow-leg-bl" cx="440" cy="565" rx="28" ry="35"/>
+    <ellipse data-region-id="cow-leg-br" cx="500" cy="560" rx="28" ry="35"/>
+    <path data-region-id="cow-tail" d="M555 440 C580 460 585 500 570 520 C555 505 545 470 545 440 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="368" cy="260" r="10"/>
+    <circle cx="432" cy="260" r="10"/>
+    <circle cx="378" cy="330" r="6"/>
+    <circle cx="422" cy="330" r="6"/>
+    <path d="M388 345 q12 10 24 0" stroke="#111111" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

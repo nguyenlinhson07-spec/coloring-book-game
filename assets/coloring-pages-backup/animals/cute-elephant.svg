@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="elephant-ear-left" d="M280 220 C190 210 170 320 240 370 C280 380 310 330 310 270 Z"/>
+    <path data-region-id="elephant-ear-right" d="M520 220 C610 210 630 320 560 370 C520 380 490 330 490 270 Z"/>
+    <circle data-region-id="elephant-head" cx="400" cy="260" r="100"/>
+    <path data-region-id="elephant-trunk" d="M370 320 C355 380 345 440 370 480 C390 500 410 495 405 470 C390 440 400 390 415 340 Z"/>
+    <ellipse data-region-id="elephant-body" cx="400" cy="470" rx="140" ry="110"/>
+    <ellipse data-region-id="elephant-leg-fl" cx="315" cy="565" rx="30" ry="34"/>
+    <ellipse data-region-id="elephant-leg-fr" cx="390" cy="570" rx="30" ry="34"/>
+    <ellipse data-region-id="elephant-leg-bl" cx="450" cy="570" rx="30" ry="34"/>
+    <ellipse data-region-id="elephant-leg-br" cx="510" cy="565" rx="30" ry="34"/>
+    <path data-region-id="elephant-tail" d="M540 450 C570 470 575 510 560 525 C548 510 540 475 535 450 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="370" cy="250" r="9"/>
+    <circle cx="430" cy="250" r="9"/>
+  </g>
+</svg>

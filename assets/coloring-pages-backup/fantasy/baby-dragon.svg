@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="dragon-horn-left" d="M360 160 C355 130 365 110 380 115 C378 135 372 155 368 175 Z"/>
+    <path data-region-id="dragon-horn-right" d="M440 160 C445 130 435 110 420 115 C422 135 428 155 432 175 Z"/>
+    <path data-region-id="dragon-back-spikes" d="M470 260 L490 210 L505 265 L520 220 L530 275 Z"/>
+    <circle data-region-id="dragon-head" cx="400" cy="220" r="80"/>
+    <ellipse data-region-id="dragon-snout" cx="450" cy="240" rx="40" ry="26"/>
+    <ellipse data-region-id="dragon-body" cx="400" cy="420" rx="140" ry="120"/>
+    <ellipse data-region-id="dragon-belly" cx="400" cy="430" rx="75" ry="70"/>
+    <path data-region-id="dragon-wing-left" d="M280 340 C180 320 130 380 140 440 C190 420 250 400 300 380 Z"/>
+    <path data-region-id="dragon-wing-right" d="M520 340 C620 320 670 380 660 440 C610 420 550 400 500 380 Z"/>
+    <ellipse data-region-id="dragon-arm-left" cx="300" cy="410" rx="26" ry="45" transform="rotate(-16 300 410)"/>
+    <ellipse data-region-id="dragon-arm-right" cx="500" cy="410" rx="26" ry="45" transform="rotate(16 500 410)"/>
+    <ellipse data-region-id="dragon-leg-left" cx="345" cy="530" rx="36" ry="26"/>
+    <ellipse data-region-id="dragon-leg-right" cx="455" cy="530" rx="36" ry="26"/>
+    <path data-region-id="dragon-tail" d="M520 470 C580 480 620 520 610 550 C580 540 545 505 520 480 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="375" cy="215" r="8"/>
+    <circle cx="425" cy="215" r="8"/>
+  </g>
+</svg>

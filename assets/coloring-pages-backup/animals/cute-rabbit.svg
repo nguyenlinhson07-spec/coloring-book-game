@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="rabbit-ear-left" d="M330 180 C300 90 310 40 340 40 C370 40 380 110 360 210 Z"/>
+    <path data-region-id="rabbit-ear-right" d="M470 180 C500 90 490 40 460 40 C430 40 420 110 440 210 Z"/>
+    <path data-region-id="rabbit-ear-inner-left" d="M335 170 C318 110 322 75 340 75 C356 75 362 120 350 190 Z"/>
+    <path data-region-id="rabbit-ear-inner-right" d="M465 170 C482 110 478 75 460 75 C444 75 438 120 450 190 Z"/>
+    <circle data-region-id="rabbit-head" cx="400" cy="270" r="110"/>
+    <ellipse data-region-id="rabbit-body" cx="400" cy="460" rx="140" ry="120"/>
+    <ellipse data-region-id="rabbit-belly" cx="400" cy="470" rx="80" ry="70"/>
+    <ellipse data-region-id="rabbit-arm-left" cx="290" cy="430" rx="35" ry="60" transform="rotate(-20 290 430)"/>
+    <ellipse data-region-id="rabbit-arm-right" cx="510" cy="430" rx="35" ry="60" transform="rotate(20 510 430)"/>
+    <ellipse data-region-id="rabbit-foot-left" cx="330" cy="565" rx="55" ry="30"/>
+    <ellipse data-region-id="rabbit-foot-right" cx="470" cy="565" rx="55" ry="30"/>
+    <circle data-region-id="rabbit-cheek-left" cx="345" cy="300" r="18"/>
+    <circle data-region-id="rabbit-cheek-right" cx="455" cy="300" r="18"/>
+    <ellipse data-region-id="rabbit-tail" cx="400" cy="560" rx="26" ry="22"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="368" cy="260" r="10"/>
+    <circle cx="432" cy="260" r="10"/>
+    <path d="M392 290 q8 10 16 0" stroke="#111111" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <ellipse cx="400" cy="278" rx="8" ry="6"/>
+  </g>
+</svg>

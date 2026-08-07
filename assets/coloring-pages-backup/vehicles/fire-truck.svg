@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <rect data-region-id="truck-body" x="180" y="320" width="440" height="120" rx="20"/>
+    <path data-region-id="truck-cabin" d="M560 260 L680 260 C700 260 710 280 710 300 L710 380 L560 380 Z"/>
+    <path data-region-id="truck-windshield" d="M580 280 L660 280 C670 280 675 290 675 300 L675 330 L580 330 Z"/>
+    <rect data-region-id="truck-ladder" x="220" y="270" width="300" height="35" rx="8"/>
+    <circle data-region-id="truck-light" cx="640" cy="250" r="16"/>
+    <rect data-region-id="truck-door" x="260" y="345" width="90" height="70" rx="8"/>
+    <circle data-region-id="truck-hose-reel" cx="430" cy="380" r="35"/>
+    <circle data-region-id="truck-wheel-1" cx="280" cy="450" r="42"/>
+    <circle data-region-id="truck-wheel-2" cx="440" cy="450" r="42"/>
+    <circle data-region-id="truck-wheel-3" cx="640" cy="450" r="42"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="280" cy="450" r="9"/>
+    <circle cx="440" cy="450" r="9"/>
+    <circle cx="640" cy="450" r="9"/>
+  </g>
+</svg>

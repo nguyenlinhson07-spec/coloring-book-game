@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <circle data-region-id="monkey-ear-left" cx="300" cy="250" r="42"/>
+    <circle data-region-id="monkey-ear-right" cx="500" cy="250" r="42"/>
+    <circle data-region-id="monkey-head" cx="400" cy="270" r="105"/>
+    <ellipse data-region-id="monkey-muzzle" cx="400" cy="310" rx="65" ry="48"/>
+    <ellipse data-region-id="monkey-body" cx="400" cy="470" rx="130" ry="110"/>
+    <ellipse data-region-id="monkey-belly" cx="400" cy="478" rx="70" ry="60"/>
+    <path data-region-id="monkey-arm-left" d="M280 410 C230 430 210 480 230 520 C260 500 285 460 295 420 Z"/>
+    <path data-region-id="monkey-arm-right" d="M520 410 C570 430 590 480 570 520 C540 500 515 460 505 420 Z"/>
+    <ellipse data-region-id="monkey-leg-left" cx="345" cy="565" rx="40" ry="27"/>
+    <ellipse data-region-id="monkey-leg-right" cx="455" cy="565" rx="40" ry="27"/>
+    <path data-region-id="monkey-tail" d="M535 480 C610 470 630 400 600 350 C610 400 590 450 545 470 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="370" cy="260" r="9"/>
+    <circle cx="430" cy="260" r="9"/>
+    <ellipse cx="380" cy="315" rx="7" ry="5"/>
+    <ellipse cx="420" cy="315" rx="7" ry="5"/>
+    <path d="M385 335 q15 12 30 0" stroke="#111111" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

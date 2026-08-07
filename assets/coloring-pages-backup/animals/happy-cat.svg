@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="cat-ear-left" d="M320 210 L280 110 L370 190 Z"/>
+    <path data-region-id="cat-ear-right" d="M480 210 L520 110 L430 190 Z"/>
+    <path data-region-id="cat-ear-inner-left" d="M325 195 L305 145 L355 185 Z"/>
+    <path data-region-id="cat-ear-inner-right" d="M475 195 L495 145 L445 185 Z"/>
+    <circle data-region-id="cat-head" cx="400" cy="275" r="110"/>
+    <ellipse data-region-id="cat-body" cx="400" cy="465" rx="140" ry="120"/>
+    <ellipse data-region-id="cat-belly" cx="400" cy="475" rx="78" ry="68"/>
+    <ellipse data-region-id="cat-arm-left" cx="290" cy="430" rx="32" ry="55" transform="rotate(-18 290 430)"/>
+    <ellipse data-region-id="cat-arm-right" cx="510" cy="430" rx="32" ry="55" transform="rotate(18 510 430)"/>
+    <ellipse data-region-id="cat-leg-left" cx="335" cy="565" rx="46" ry="28"/>
+    <ellipse data-region-id="cat-leg-right" cx="465" cy="565" rx="46" ry="28"/>
+    <path data-region-id="cat-tail" d="M540 480 C610 460 620 380 580 340 C570 380 560 440 520 470 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="365" cy="270" r="9"/>
+    <circle cx="435" cy="270" r="9"/>
+    <path d="M400 295 l-10 12 M400 295 l10 12" stroke="#111111" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M330 300 h-40 M330 310 h-45 M470 300 h40 M470 310 h45" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

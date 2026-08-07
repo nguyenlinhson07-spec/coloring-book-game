@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="puppy-ear-left" d="M310 220 C230 230 210 320 260 360 C300 380 330 320 335 260 Z"/>
+    <path data-region-id="puppy-ear-right" d="M490 220 C570 230 590 320 540 360 C500 380 470 320 465 260 Z"/>
+    <circle data-region-id="puppy-head" cx="400" cy="280" r="115"/>
+    <ellipse data-region-id="puppy-snout" cx="400" cy="330" rx="55" ry="40"/>
+    <ellipse data-region-id="puppy-body" cx="400" cy="470" rx="145" ry="115"/>
+    <ellipse data-region-id="puppy-belly" cx="400" cy="480" rx="80" ry="65"/>
+    <ellipse data-region-id="puppy-arm-left" cx="285" cy="440" rx="32" ry="58" transform="rotate(-15 285 440)"/>
+    <ellipse data-region-id="puppy-arm-right" cx="515" cy="440" rx="32" ry="58" transform="rotate(15 515 440)"/>
+    <ellipse data-region-id="puppy-leg-left" cx="335" cy="565" rx="45" ry="28"/>
+    <ellipse data-region-id="puppy-leg-right" cx="465" cy="565" rx="45" ry="28"/>
+    <path data-region-id="puppy-tail" d="M540 460 C590 440 600 400 580 380 C560 400 540 430 530 460 Z"/>
+    <circle data-region-id="puppy-spot" cx="450" cy="230" r="30"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="368" cy="270" r="10"/>
+    <circle cx="432" cy="270" r="10"/>
+    <ellipse cx="400" cy="325" rx="12" ry="9"/>
+    <path d="M385 350 q15 15 30 0" stroke="#111111" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

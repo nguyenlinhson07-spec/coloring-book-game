@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="trex-back-spikes" d="M430 200 L450 150 L465 205 L485 160 L498 215 L510 175 L520 230 Z"/>
+    <circle data-region-id="trex-head" cx="380" cy="220" r="80"/>
+    <ellipse data-region-id="trex-snout" cx="450" cy="230" rx="55" ry="35"/>
+    <path data-region-id="trex-body" d="M300 280 C260 340 260 440 320 500 C400 550 480 530 520 460 C540 400 520 330 470 290 C420 260 350 260 300 280 Z"/>
+    <ellipse data-region-id="trex-belly" cx="400" cy="420" rx="80" ry="70"/>
+    <path data-region-id="trex-arm-left" d="M320 340 C295 350 280 375 290 395 C310 385 325 365 330 345 Z"/>
+    <path data-region-id="trex-arm-right" d="M480 340 C505 350 520 375 510 395 C490 385 475 365 470 345 Z"/>
+    <ellipse data-region-id="trex-leg-left" cx="360" cy="530" rx="42" ry="55"/>
+    <ellipse data-region-id="trex-leg-right" cx="470" cy="520" rx="42" ry="55"/>
+    <path data-region-id="trex-tail" d="M300 320 C230 330 170 360 140 400 C190 400 250 385 300 360 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="360" cy="205" r="9"/>
+    <path d="M420 235 l40 8 M420 250 l38 6" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <circle data-region-id="panda-ear-left" cx="315" cy="185" r="44"/>
+    <circle data-region-id="panda-ear-right" cx="485" cy="185" r="44"/>
+    <circle data-region-id="panda-head" cx="400" cy="270" r="115"/>
+    <ellipse data-region-id="panda-eye-patch-left" cx="360" cy="265" rx="30" ry="38" transform="rotate(-10 360 265)"/>
+    <ellipse data-region-id="panda-eye-patch-right" cx="440" cy="265" rx="30" ry="38" transform="rotate(10 440 265)"/>
+    <ellipse data-region-id="panda-body" cx="400" cy="470" rx="145" ry="115"/>
+    <ellipse data-region-id="panda-belly" cx="400" cy="480" rx="78" ry="64"/>
+    <ellipse data-region-id="panda-arm-left" cx="285" cy="440" rx="36" ry="58" transform="rotate(-16 285 440)"/>
+    <ellipse data-region-id="panda-arm-right" cx="515" cy="440" rx="36" ry="58" transform="rotate(16 515 440)"/>
+    <ellipse data-region-id="panda-leg-left" cx="335" cy="565" rx="46" ry="28"/>
+    <ellipse data-region-id="panda-leg-right" cx="465" cy="565" rx="46" ry="28"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="360" cy="270" r="12"/>
+    <circle cx="440" cy="270" r="12"/>
+    <ellipse cx="400" cy="320" rx="10" ry="7"/>
+    <path d="M385 340 q15 12 30 0" stroke="#111111" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

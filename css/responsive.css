@@ -1,0 +1,60 @@
+/* Tablet */
+@media (max-width: 1024px) {
+  .picture-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .editor-layout {
+    grid-template-columns: 72px 1fr 200px;
+  }
+}
+
+/* Small tablet / large phone landscape */
+@media (max-width: 860px) {
+  .editor-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+  .tool-rail {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .side-panel {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .panel-block { flex: 1 1 200px; }
+  .canvas-stage { min-height: 340px; }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  :root { font-size: 15px; }
+  .app-frame { padding: 10px; }
+  .rainbow-border { padding: 8px; border-radius: 26px; }
+  .content-card { padding: 16px 12px 22px; border-radius: 20px; min-height: 90vh; }
+  .picture-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .game-title { font-size: 20px; }
+  .logo-mark { width: 44px; height: 44px; }
+  .icon-btn { width: 46px; height: 46px; font-size: 20px; }
+  .category-bar { gap: 6px; }
+  .category-btn { padding: 8px 14px; font-size: 13px; }
+  .tool-btn { width: 52px; height: 52px; font-size: 20px; }
+  .color-grid { grid-template-columns: repeat(6, 1fr); }
+  .editor-topbar .title-block { font-size: 15px; }
+  .canvas-stage { min-height: 280px; }
+}
+
+/* Very narrow phones */
+@media (max-width: 400px) {
+  .picture-grid { grid-template-columns: 1fr; }
+  .pagination-bar { gap: 10px; }
+  .page-nav-btn { width: 44px; height: 44px; font-size: 18px; }
+}
+
+/* Landscape phones (short height) */
+@media (max-height: 480px) and (orientation: landscape) {
+  .content-card { min-height: unset; }
+  .canvas-stage { min-height: 220px; }
+  .editor-layout { grid-template-rows: auto 1fr; }
+}

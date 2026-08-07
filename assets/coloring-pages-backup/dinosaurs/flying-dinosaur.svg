@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="pterodactyl-crest" d="M370 150 C360 100 380 70 405 80 C400 110 395 140 390 170 Z"/>
+    <circle data-region-id="pterodactyl-head" cx="380" cy="210" r="60"/>
+    <path data-region-id="pterodactyl-beak" d="M430 220 L500 235 L430 250 Z"/>
+    <ellipse data-region-id="pterodactyl-body" cx="400" cy="380" rx="80" ry="100"/>
+    <path data-region-id="pterodactyl-wing-left" d="M340 330 C200 300 120 350 100 420 C170 400 240 390 340 400 Z"/>
+    <path data-region-id="pterodactyl-wing-right" d="M460 330 C600 300 680 350 700 420 C630 400 560 390 460 400 Z"/>
+    <ellipse data-region-id="pterodactyl-belly" cx="400" cy="400" rx="45" ry="65"/>
+    <path data-region-id="pterodactyl-leg-left" d="M370 460 C360 490 365 510 380 515 C390 495 390 470 385 450 Z"/>
+    <path data-region-id="pterodactyl-leg-right" d="M430 460 C440 490 435 510 420 515 C410 495 410 470 415 450 Z"/>
+    <path data-region-id="pterodactyl-tail" d="M400 480 C400 510 410 530 425 530 C420 510 415 495 410 480 Z"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="360" cy="200" r="8"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="castle-flag-left" d="M230 130 L280 150 L230 170 Z"/>
+    <path data-region-id="castle-flag-right" d="M570 130 L520 150 L570 170 Z"/>
+    <path data-region-id="castle-roof-left" d="M190 220 L230 150 L270 220 Z"/>
+    <path data-region-id="castle-roof-right" d="M530 220 L570 150 L610 220 Z"/>
+    <path data-region-id="castle-roof-center" d="M340 200 L400 110 L460 200 Z"/>
+    <rect data-region-id="castle-left-tower" x="180" y="220" width="90" height="180" rx="6"/>
+    <rect data-region-id="castle-right-tower" x="530" y="220" width="90" height="180" rx="6"/>
+    <rect data-region-id="castle-main-tower" x="300" y="200" width="200" height="240" rx="10"/>
+    <path data-region-id="castle-door" d="M370 440 L370 360 C370 340 430 340 430 360 L430 440 Z"/>
+    <circle data-region-id="castle-window-1" cx="340" cy="290" r="22"/>
+    <circle data-region-id="castle-window-2" cx="460" cy="290" r="22"/>
+    <path data-region-id="castle-wall-detail" d="M230 400 L620 400 L620 440 L230 440 Z"/>
+  </g>
+  <g fill="#111111">
+  </g>
+</svg>

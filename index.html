@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Happy Coloring Book</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#ff6b6b" />
+<link rel="icon" href="assets/icons/icon-192.png" />
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<div class="app-frame">
+  <div class="rainbow-border">
+    <div class="content-card">
+
+      <!-- ============ SELECTION SCREEN ============ -->
+      <section id="screen-selection" class="screen">
+        <header class="game-header">
+          <div class="logo-wrap">
+            <div class="logo-mark"><span>🎨</span></div>
+            <h1 class="game-title">Happy <span class="accent">Coloring</span> Book</h1>
+          </div>
+          <div class="header-actions">
+            <button class="icon-btn" id="gallery-open-btn" title="Gallery" aria-label="Open Gallery">🖼️</button>
+            <button class="icon-btn" id="sound-toggle-btn" title="Sound" aria-label="Toggle Sound">🔊</button>
+          </div>
+        </header>
+
+        <h2 class="section-heading">CHOOSE A PICTURE TO COLOR</h2>
+
+        <div class="category-bar" id="category-bar"></div>
+
+        <div class="picture-grid" id="picture-grid"></div>
+
+        <div class="pagination-bar">
+          <button class="page-nav-btn" id="prev-page-btn" aria-label="Previous page">◀</button>
+          <span class="page-counter" id="page-counter">Page 1 / 1</span>
+          <button class="page-nav-btn" id="next-page-btn" aria-label="Next page">▶</button>
+        </div>
+      </section>
+
+      <!-- ============ EDITOR SCREEN ============ -->
+      <section id="screen-editor" class="screen hidden">
+        <div class="editor-topbar">
+          <div class="title-block" id="editor-title">Picture Name</div>
+          <div class="editor-actions">
+            <button class="pill-btn" id="editor-home-btn">🏠 Home</button>
+            <button class="pill-btn" id="editor-prev-btn">⬅️ Prev</button>
+            <button class="pill-btn" id="editor-next-btn">Next ➡️</button>
+            <button class="icon-btn" id="editor-sound-btn" title="Sound">🔊</button>
+          </div>
+        </div>
+
+        <div class="editor-layout">
+          <div class="tool-rail">
+            <button class="tool-btn active" id="tool-fill" data-tool="fill" title="Fill Bucket">🪣<small>Fill</small></button>
+            <button class="tool-btn" id="tool-brush" data-tool="brush" title="Brush">🖌️<small>Brush</small></button>
+            <button class="tool-btn" id="tool-eraser" data-tool="eraser" title="Eraser">🧽<small>Erase</small></button>
+            <div class="brush-size-wrap">
+              <label for="brush-size" style="font-size:11px;font-weight:700;">Size</label>
+              <input type="range" id="brush-size" min="4" max="40" value="14" />
+            </div>
+            <button class="tool-btn" id="tool-undo" title="Undo">↩️<small>Undo</small></button>
+            <button class="tool-btn" id="tool-redo" title="Redo">↪️<small>Redo</small></button>
+            <button class="tool-btn" id="tool-reset" title="Reset">🔄<small>Reset</small></button>
+          </div>
+
+          <div class="canvas-stage">
+            <div class="canvas-viewport" id="canvas-viewport">
+              <div id="coloring-canvas-host"></div>
+            </div>
+            <div class="zoom-controls">
+              <button class="tool-btn" id="zoom-out-btn" title="Zoom Out">➖</button>
+              <button class="tool-btn" id="zoom-fit-btn" title="Fit to Screen">⛶</button>
+              <button class="tool-btn" id="zoom-in-btn" title="Zoom In">➕</button>
+            </div>
+          </div>
+
+          <div class="side-panel">
+            <div class="panel-block">
+              <p class="panel-title">Current Color</p>
+              <div class="current-color-display">
+                <div class="current-color-swatch" id="current-color-swatch" style="background:#ff6b6b;"></div>
+                <span id="current-color-label">Coral Red</span>
+              </div>
+              <div class="color-grid" id="color-grid"></div>
+              <div class="special-color-row">
+                <button class="special-btn" id="random-color-btn">🎲 Random</button>
+                <button class="special-btn" id="rainbow-color-btn">🌈 Rainbow</button>
+              </div>
+              <p class="panel-title" style="margin-top:10px;">Recent</p>
+              <div class="recent-colors-row" id="recent-colors-row"></div>
+            </div>
+            <div class="panel-block">
+              <p class="panel-title">Actions</p>
+              <button class="pill-btn" id="save-btn" style="width:100%;margin-bottom:8px;">💾 Save</button>
+              <button class="pill-btn" id="download-btn" style="width:100%;">⬇️ Download PNG</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ GALLERY SCREEN ============ -->
+      <section id="screen-gallery" class="screen hidden">
+        <header class="game-header">
+          <div class="logo-wrap">
+            <div class="logo-mark"><span>🖼️</span></div>
+            <h1 class="game-title">My Gallery</h1>
+          </div>
+          <div class="header-actions">
+            <button class="pill-btn" id="gallery-home-btn">🏠 Home</button>
+          </div>
+        </header>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<canvas id="confetti-canvas" class="hidden"></canvas>
+
+<script src="js/data.js"></script>
+<script src="js/storage-manager.js"></script>
+<script src="js/audio-manager.js"></script>
+<script src="js/mask-patches.js"></script>
+<script src="js/coloring-engine.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="wizard-hat" d="M400 90 L470 260 L330 260 Z"/>
+    <path data-region-id="wizard-hat-brim" d="M300 260 C300 240 500 240 500 260 C500 280 300 280 300 260 Z"/>
+    <path data-region-id="wizard-star-on-hat" d="M400 150 L408 168 L428 168 L412 180 L418 200 L400 188 L382 200 L388 180 L372 168 L392 168 Z"/>
+    <circle data-region-id="wizard-head" cx="400" cy="300" r="55"/>
+    <path data-region-id="wizard-beard" d="M355 320 C350 380 370 420 400 430 C430 420 450 380 445 320 C420 345 380 345 355 320 Z"/>
+    <path data-region-id="wizard-robe" d="M310 380 C300 460 290 540 310 570 L490 570 C510 540 500 460 490 380 C450 400 350 400 310 380 Z"/>
+    <path data-region-id="wizard-arm-left" d="M310 400 C270 420 250 460 260 490 C290 475 315 440 325 405 Z"/>
+    <path data-region-id="wizard-arm-right" d="M490 400 C530 420 550 460 540 490 C510 475 485 440 475 405 Z"/>
+    <path data-region-id="wizard-wand" d="M540 480 L590 520" fill="none"/>
+    <rect data-region-id="wizard-belt" x="330" y="440" width="140" height="24" rx="8"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="385" cy="295" r="7"/>
+    <circle cx="415" cy="295" r="7"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="car-body" d="M150 380 C150 320 220 300 300 300 C340 260 460 260 500 300 C580 300 650 320 650 380 C650 420 620 440 580 440 L220 440 C180 440 150 420 150 380 Z"/>
+    <path data-region-id="car-cabin" d="M320 300 C340 265 460 265 480 300 Z"/>
+    <path data-region-id="car-windshield" d="M335 300 C350 275 450 275 465 300 Z"/>
+    <path data-region-id="car-spoiler" d="M600 300 L660 290 L660 320 L610 320 Z"/>
+    <rect data-region-id="car-stripe" x="300" y="380" width="200" height="30" rx="8"/>
+    <circle data-region-id="car-headlight" cx="630" cy="360" r="18"/>
+    <rect data-region-id="car-bumper" x="160" y="400" width="60" height="30" rx="10"/>
+    <circle data-region-id="car-wheel-left" cx="280" cy="450" r="45"/>
+    <circle data-region-id="car-wheel-right" cx="540" cy="450" r="45"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="280" cy="450" r="10"/>
+    <circle cx="540" cy="450" r="10"/>
+  </g>
+</svg>

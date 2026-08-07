@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="strawberry-leaf-crown" d="M300 160 L340 210 L370 150 L400 215 L430 150 L460 210 L500 160 L470 230 L330 230 Z"/>
+    <path data-region-id="strawberry-stem" d="M395 150 L400 110 L410 150 Z"/>
+    <path data-region-id="strawberry-body" d="M330 230 C260 260 240 340 270 420 C300 500 350 540 400 540 C450 540 500 500 530 420 C560 340 540 260 470 230 Z"/>
+    <circle data-region-id="strawberry-seed-1" cx="340" cy="320" r="9"/>
+    <circle data-region-id="strawberry-seed-2" cx="400" cy="300" r="9"/>
+    <circle data-region-id="strawberry-seed-3" cx="460" cy="320" r="9"/>
+    <circle data-region-id="strawberry-seed-4" cx="360" cy="410" r="9"/>
+    <circle data-region-id="strawberry-seed-5" cx="440" cy="410" r="9"/>
+    <ellipse data-region-id="strawberry-highlight" cx="340" cy="290" rx="22" ry="35"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="365" cy="360" r="10"/>
+    <circle cx="435" cy="360" r="10"/>
+    <path d="M375 400 q25 20 50 0" stroke="#111111" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="unicorn-horn" d="M395 140 L410 60 L425 140 Z"/>
+    <path data-region-id="unicorn-ear-left" d="M355 150 C335 130 340 105 360 110 C365 130 362 145 358 160 Z"/>
+    <path data-region-id="unicorn-ear-right" d="M445 150 C465 130 460 105 440 110 C435 130 438 145 442 160 Z"/>
+    <path data-region-id="unicorn-mane" d="M340 160 C310 200 300 260 320 300 C300 260 280 200 310 155 C330 145 350 150 340 160 Z"/>
+    <circle data-region-id="unicorn-head" cx="400" cy="200" r="65"/>
+    <path data-region-id="unicorn-body" d="M330 260 C280 280 260 350 280 420 L280 480 C280 500 320 510 400 510 C480 510 520 500 520 480 L520 420 C540 350 520 280 470 260 C420 250 380 250 330 260 Z"/>
+    <ellipse data-region-id="unicorn-belly" cx="400" cy="400" rx="90" ry="55"/>
+    <path data-region-id="unicorn-tail" d="M510 350 C560 370 580 420 560 460 C540 420 520 380 500 350 Z"/>
+    <ellipse data-region-id="unicorn-leg-fl" cx="330" cy="500" rx="24" ry="42"/>
+    <ellipse data-region-id="unicorn-leg-fr" cx="390" cy="505" rx="24" ry="42"/>
+    <ellipse data-region-id="unicorn-leg-bl" cx="450" cy="505" rx="24" ry="42"/>
+    <ellipse data-region-id="unicorn-leg-br" cx="500" cy="500" rx="24" ry="42"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="415" cy="195" r="8"/>
+  </g>
+</svg>

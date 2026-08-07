@@ -1,0 +1,182 @@
+{
+  "0654a6aaeb5ce27a2f54b3b5af012aa963004c1eda27a6e30699d6c06f1c4266": {
+    "id": "lion",
+    "category": "animals",
+    "source": "132f77ff-655d-4a58-9981-096935693450.png"
+  },
+  "7110fe923ce4584c0bd275580d25625acf49379575e08b96a8909a0c79d6c833": {
+    "id": "cow",
+    "category": "animals",
+    "source": "3f38ba91-3665-4191-9790-e0b23360f1c7.png"
+  },
+  "e0c0909b946692fb7da71c60268415de8beed243c4f8db0ee36edb6429fcd4c3": {
+    "id": "dog",
+    "category": "animals",
+    "source": "4d05790b-ce9b-416a-ab1c-c0750563ffbd.png"
+  },
+  "aaece93d35cbf9cdfc7132ec7f080c3c58c05ab6e74e9f6e4e87bd482dae935c": {
+    "id": "elephant",
+    "category": "animals",
+    "source": "4ff6e170-fb6c-417e-b27a-05e4aabe3262.png"
+  },
+  "5ec2566efbc741285ace98b1661cf1df04de0f170577b6e384e457310cfa28e2": {
+    "id": "cat",
+    "category": "animals",
+    "source": "54cbd3c0-6c51-4e37-869e-0b428d370ea7.png"
+  },
+  "04e706606c9c3b58cf581a1e5c9ba25782cbabbf92940271b714b52f1ed50cf6": {
+    "id": "squirrel",
+    "category": "animals",
+    "source": "57008232-341f-4b66-a3de-35f76d03b20a.png"
+  },
+  "f24c5a9eace5ddb5d115f68e9c5d57bb29545d67245229d51b7c8d9158fb2711": {
+    "id": "horse",
+    "category": "animals",
+    "source": "5a2b125f-ea37-411d-95e4-fe3f8c8f6a55.png"
+  },
+  "e61c8abe9915e9bb48b4ee6a00c05d7acbec0b806b159f6afdb9b56767634e0c": {
+    "id": "panda",
+    "category": "animals",
+    "source": "79659d8d-04fa-4173-a5ce-93dbae8cfc01.png"
+  },
+  "1ce9c4aa0f6e1d90129d943996eb83ad086d6be2e6a68cbc517c7f95483177d1": {
+    "id": "giraffe",
+    "category": "animals",
+    "source": "7a2a4dd7-60c4-416a-94b3-f6e096127cb6.png"
+  },
+  "e72d61c4a1f268148bf9f06fd58d066d461dd3b9d04f1d7af46e1a6a3773881a": {
+    "id": "rabbit",
+    "category": "animals",
+    "source": "7e1e7bf7-b712-4393-ac79-5b51d5dc6a60.png"
+  },
+  "bf7161b55bf2ae9f47ff5c12721312fabce1c28cc9567a83763361faff822c05": {
+    "id": "puppy",
+    "category": "animals",
+    "source": "8c57a74b-50fd-438a-b815-5c22044af5fc.png"
+  },
+  "a34a2d09363378aa4514da2091f5a982202f27f993facc32bcac2132c27bea7d": {
+    "id": "baby-elephant",
+    "category": "animals",
+    "source": "93740e31-d1fd-4edb-a665-6005d6ff917a.png"
+  },
+  "05525d3103ffb067d30456d4fd61cbe317ac1771494a08d586681361ed0890c0": {
+    "id": "mafia-monkey",
+    "category": "brainrot",
+    "source": "01c2c283-5757-4d91-aa39-c62ba40a2350.png"
+  },
+  "1b2623b930cfdc577b0fbfa4192cc6f2a12bf2aab3279d23247329b742d27fa3": {
+    "id": "tralalero-tralala",
+    "category": "brainrot",
+    "source": "2314f010-4319-45c5-90d2-2fc5176ee827.png"
+  },
+  "fb63d6ef8e746e20cbb7bf36915adb75e47ff2c9545d307a83a0267e0f4cadc3": {
+    "id": "cappuccino-assassino",
+    "category": "brainrot",
+    "source": "300f47a2-08a8-454c-8649-b397aa63172b.png"
+  },
+  "9d40340d0f160e5750e0ce670af56dae9ef2e9c3f649a8adfb7e745aa0979e42": {
+    "id": "bombombini-gusini",
+    "category": "brainrot",
+    "source": "4529ce93-2aa0-42ef-9c16-c999ceb160bd.png"
+  },
+  "1912a9f476dd15fe27c5d2d3d429eb9c8a4a1f59cc9ce48533cb51066b651880": {
+    "id": "bombardiro-crocodilo",
+    "category": "brainrot",
+    "source": "79ee426f-660a-47df-b657-7de3214542ab.png"
+  },
+  "c95662557d9f6dd6954130635cf8679cb5c274743095711ea2f345be70603a7f": {
+    "id": "vacca-saturno-saturnita",
+    "category": "brainrot",
+    "source": "82966b90-5cdb-42b4-873d-d44374f13540.png"
+  },
+  "085a2b217594b87b76a9396c66068b2a463fddaa04480e5c11ad97e70ecf8136": {
+    "id": "lirili-larila",
+    "category": "brainrot",
+    "source": "d96709c2-e636-4f15-9c5e-c6b427960e96.png"
+  },
+  "93e455d5ee0df68feaafcecb8e908ae8e71b816c81d3ed73c0b3b0de0e9b721f": {
+    "id": "tung-tung-tung-sahur",
+    "category": "brainrot",
+    "source": "e2ee3fae-23ac-425f-b6a2-e70e8b8c797d.png"
+  },
+  "31875e08f9d6c42af6c869e6e1e7e020400bb55cf0dfc2a28ac15ab2df17ab21": {
+    "id": "brr-brr-patapim",
+    "category": "brainrot",
+    "source": "ed06d0cd-27c2-40da-848e-e334f9e7edbf.png"
+  },
+  "084d71c3fcafe923e00515246689d125c833bf0d3a065bfd5c3602365ff882c2": {
+    "id": "bri-bri-bicus-dicus-bombicus",
+    "category": "brainrot",
+    "source": "ee1c6b11-49e0-4e8e-a2ac-49a15382261f.png"
+  },
+  "890241e033fef46295c02ba7825e00d4cae853ce7f44e10999a4095440af386d": {
+    "id": "ballerina-cappuccina",
+    "category": "brainrot",
+    "source": "f7ff89c2-005d-440c-9274-2ac7463fc631.png"
+  },
+  "5b8d1562e891703edb509046fc5029cbf120fe1b45366f8815f1e65da00f4d61": {
+    "id": "chimpanzini-bananini",
+    "category": "brainrot",
+    "source": "fd8b06e4-73c1-40a5-aa88-0c02084c0893.png"
+  },
+  "1a5581738d7be0d1841065a0f86775177e5a0ac5267ab7b552b7d12cd4c60341": {
+    "id": "velociraptor",
+    "category": "dinosaurs",
+    "source": "054ff3dc-1983-4f87-8a95-9a022db9682a.png"
+  },
+  "fd11d8276480d755f762e4012e8993f70203100891e61b32cc2137b10c3bee96": {
+    "id": "parasaurolophus",
+    "category": "dinosaurs",
+    "source": "0d2a74f2-e0a1-4411-b871-4f794848cccc.png"
+  },
+  "554d7734d5fad298a401727d4cb81bac2c2e64456c50b1997f533bad4c65fa61": {
+    "id": "elasmosaurus",
+    "category": "dinosaurs",
+    "source": "2ac72020-2446-41e5-8bc2-411111fd97a8.png"
+  },
+  "be5772e201ef448376151f33374b47bf66450a01a5c1670fbe275edabaf2b018": {
+    "id": "stegosaurus",
+    "category": "dinosaurs",
+    "source": "6db01b07-19cb-4592-b7fd-c72f26d4a8b5.png"
+  },
+  "6d79dba626c5240afd6d02b5042b5361ff2662bfd7feaba04663ad1c0419bcea": {
+    "id": "mosasaurus",
+    "category": "dinosaurs",
+    "source": "bae15ab2-58c0-41b8-8d47-332af46947ce.png"
+  },
+  "fe909273ed689bf0905f67a003007e17f5f864d0407fa5dfae2e575d28d8be81": {
+    "id": "plesiosaurus",
+    "category": "dinosaurs",
+    "source": "be781021-6776-463c-8075-c6fc226f902b.png"
+  },
+  "df64344de01faf7896a033673825d9f7417b05bef351accfa68bcc4770fae113": {
+    "id": "spinosaurus",
+    "category": "dinosaurs",
+    "source": "cbe4d027-d573-4646-b7af-7bbb0cd9826e.png"
+  },
+  "172b5d1fb49fca53d354f19a9aa2301ff798fdbfa643a35c7b3a0142da48b9fb": {
+    "id": "ankylosaurus",
+    "category": "dinosaurs",
+    "source": "dcc0b385-360a-460f-9bbc-e52aaae77f33.png"
+  },
+  "a86d328d00bf0d7d9308a6de1346acc2a55245c3fadff67e047c91e1ac8ee900": {
+    "id": "triceratops",
+    "category": "dinosaurs",
+    "source": "f0a8742d-84a2-47ee-af20-63473706b730.png"
+  },
+  "8076f2a8f0775987592012502c9e1c74b018084aebd3882b10d21969c584c5fb": {
+    "id": "t-rex",
+    "category": "dinosaurs",
+    "source": "f7c4009d-2e4b-4c71-849a-8ab1512bcfab.png"
+  },
+  "5be25993b3c95a2c66ac8cd3e838b4dcb82186cb498c996e1590d7feda308328": {
+    "id": "brachiosaurus",
+    "category": "dinosaurs",
+    "source": "fbe718c5-82da-4903-84de-5ea6531a3c0a.png"
+  },
+  "d70c81c1d7e75186e271258c53ce3f79eda0fb932a7384eb77908658f7c934b0": {
+    "id": "pterodactyl",
+    "category": "dinosaurs",
+    "source": "fd1dfd86-d752-43a6-90b2-09f72491853d.png"
+  }
+}

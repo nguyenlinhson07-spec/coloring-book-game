@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <rect data-region-id="bus-body" x="150" y="260" width="500" height="170" rx="30"/>
+    <path data-region-id="bus-roof" d="M170 260 C170 230 200 220 240 220 L560 220 C600 220 630 230 630 260 Z"/>
+    <rect data-region-id="bus-window-1" x="200" y="270" width="90" height="70" rx="12"/>
+    <rect data-region-id="bus-window-2" x="320" y="270" width="90" height="70" rx="12"/>
+    <rect data-region-id="bus-window-3" x="440" y="270" width="90" height="70" rx="12"/>
+    <rect data-region-id="bus-door" x="560" y="270" width="60" height="130" rx="10"/>
+    <rect data-region-id="bus-bumper" x="160" y="410" width="480" height="25" rx="8"/>
+    <path data-region-id="bus-stop-sign" d="M120 320 L150 320 L150 360 L120 360 Z"/>
+    <circle data-region-id="bus-wheel-1" cx="260" cy="440" r="40"/>
+    <circle data-region-id="bus-wheel-2" cx="540" cy="440" r="40"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="260" cy="440" r="9"/>
+    <circle cx="540" cy="440" r="9"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <circle data-region-id="longneck-head" cx="220" cy="150" r="45"/>
+    <path data-region-id="longneck-neck" d="M250 180 C320 230 400 280 440 330 L400 380 C350 320 290 260 220 200 Z"/>
+    <ellipse data-region-id="longneck-body" cx="480" cy="420" rx="160" ry="110"/>
+    <ellipse data-region-id="longneck-belly" cx="480" cy="430" rx="90" ry="65"/>
+    <path data-region-id="longneck-tail" d="M620 380 C700 370 750 400 770 440 C720 440 660 425 615 405 Z"/>
+    <ellipse data-region-id="longneck-leg-fl" cx="410" cy="510" rx="32" ry="45"/>
+    <ellipse data-region-id="longneck-leg-fr" cx="480" cy="520" rx="32" ry="45"/>
+    <ellipse data-region-id="longneck-leg-bl" cx="550" cy="520" rx="32" ry="45"/>
+    <ellipse data-region-id="longneck-leg-br" cx="600" cy="505" rx="32" ry="45"/>
+    <circle data-region-id="longneck-spot-1" cx="470" cy="370" r="20"/>
+    <circle data-region-id="longneck-spot-2" cx="540" cy="400" r="24"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="205" cy="140" r="7"/>
+  </g>
+</svg>

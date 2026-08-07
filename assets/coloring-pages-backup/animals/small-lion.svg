@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g stroke="#111111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff">
+    <path data-region-id="lion-mane" d="M400 130 C480 130 540 190 545 260 C560 300 550 350 520 380 C540 330 520 260 480 230 C500 280 490 330 460 360 C465 300 440 250 400 240 C360 250 335 300 340 360 C310 330 300 280 320 230 C280 260 260 330 280 380 C250 350 240 300 255 260 C260 190 320 130 400 130 Z"/>
+    <circle data-region-id="lion-head" cx="400" cy="270" r="95"/>
+    <ellipse data-region-id="lion-snout" cx="400" cy="315" rx="45" ry="32"/>
+    <ellipse data-region-id="lion-body" cx="400" cy="470" rx="135" ry="110"/>
+    <ellipse data-region-id="lion-belly" cx="400" cy="480" rx="72" ry="60"/>
+    <ellipse data-region-id="lion-arm-left" cx="292" cy="440" rx="30" ry="52" transform="rotate(-16 292 440)"/>
+    <ellipse data-region-id="lion-arm-right" cx="508" cy="440" rx="30" ry="52" transform="rotate(16 508 440)"/>
+    <ellipse data-region-id="lion-leg-left" cx="340" cy="565" rx="42" ry="26"/>
+    <ellipse data-region-id="lion-leg-right" cx="460" cy="565" rx="42" ry="26"/>
+    <path data-region-id="lion-tail" d="M535 470 C590 460 610 420 600 400 C580 420 555 450 530 460 Z"/>
+    <circle data-region-id="lion-tail-tuft" cx="600" cy="395" r="20"/>
+  </g>
+  <g fill="#111111">
+    <circle cx="372" cy="260" r="9"/>
+    <circle cx="428" cy="260" r="9"/>
+    <ellipse cx="400" cy="310" rx="10" ry="7"/>
+    <path d="M388 328 q12 10 24 0" stroke="#111111" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
