@@ -426,8 +426,8 @@ const App = (() => {
     showScreen('editor');
     const saved = StorageManager.getProgress(pageId);
     await engine.loadPage(page, saved);
-    setTool('fill');
     selectColor(PALETTE[0].hex, PALETTE[0].name, false);
+    setTool('brush');
     Voice.speak(page.title);
     AudioManager.startAmbient(page.category);
   }
