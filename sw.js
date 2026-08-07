@@ -6,7 +6,7 @@
    picture is opened (cache-first-then-network), meaning any picture the
    child has already colored keeps working offline, and new ones just
    need one online visit. */
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 const SHELL_CACHE = `coloring-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `coloring-runtime-${CACHE_VERSION}`;
 
@@ -54,20 +54,24 @@ self.addEventListener('activate', (event) => {
   })());
 });
 
-/* data/coloring-pages.json is the picture catalog — it grows over time as
-   pages get added, so it must never be served stale-forever from a
-   cache-first hit like the rest of the shell. Network-first: always try
-   for the latest catalog online, only falling back to the cached copy
-   when actually offline. */
-function isCatalog(url) {
-  return new URL(url).pathname.endsWith('data/coloring-pages.json');
+/* Anything that IS the app (markup/code/config/catalog) must never be
+   served stale-forever from a cache-first hit — this game gets new pages
+   and fixes pushed regularly, and a returning player should see them the
+   moment they're online, not "whenever the cache version happens to bump".
+   Only the large, effectively-immutable art assets (coloring-page PNGs,
+   mask/region PNGs) stay cache-first, since those really don't change
+   once published and are the whole point of the offline support. */
+function isAppCode(url) {
+  const path = new URL(url).pathname;
+  return path.endsWith('/') || path.endsWith('.html') || path.endsWith('.js') ||
+    path.endsWith('.css') || path.endsWith('manifest.json') || path.endsWith('coloring-pages.json');
 }
 
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
 
-  if (isCatalog(req.url)) {
+  if (isAppCode(req.url)) {
     event.respondWith((async () => {
       try {
         const fresh = await fetch(req);
@@ -77,7 +81,8 @@ self.addEventListener('fetch', (event) => {
         }
         return fresh;
       } catch (e) {
-        const cached = await caches.match(req, { cacheName: SHELL_CACHE });
+        const cached = await caches.match(req, { cacheName: SHELL_CACHE }) ||
+          await caches.match('index.html', { cacheName: SHELL_CACHE });
         if (cached) return cached;
         throw e;
       }
