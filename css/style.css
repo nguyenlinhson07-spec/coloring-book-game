@@ -361,27 +361,36 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
    forced wide, the canvas renders far larger than the viewport, and only
    the left slice of it is visible — reading as "the artwork is zoomed in
    and cropped" even though the actual draw/zoom math is untouched. */
+/* Column layout: the artwork viewport takes the flexible top area, the
+   zoom toolbar is a normal-flow sibling below it — never an absolutely
+   positioned overlay sitting on top of the artwork (that was the bug:
+   .zoom-controls used to be position:absolute; bottom/right, covering
+   part of the character on narrow screens where the canvas has less
+   headroom around it). */
 .canvas-stage {
   background: #f6f7fb;
   border-radius: 20px;
   border: 3px solid #e4e6f2;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
   overflow: hidden;
   position: relative;
   min-height: 400px;
   min-width: 0;
   max-width: 100%;
+  padding-bottom: 10px;
 }
 
 .canvas-viewport {
   width: 100%;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   touch-action: none;
 }
 
@@ -414,12 +423,25 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   box-sizing: border-box;
 }
 
-.zoom-controls {
-  position: absolute;
-  bottom: 14px; right: 14px;
-  display: flex; gap: 8px;
+.zoom-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+  position: static;
+  transform: none;
+  flex: 0 0 auto;
 }
-.zoom-controls .tool-btn { width: 46px; height: 46px; font-size: 18px; }
+.zoom-toolbar .tool-btn {
+  width: 46px;
+  height: 46px;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 18px;
+  flex: 0 0 auto;
+}
 
 .side-panel {
   display: flex;

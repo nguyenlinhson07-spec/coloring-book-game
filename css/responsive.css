@@ -123,6 +123,9 @@
   .editor-topbar .title-block { font-size: 15px; }
   .canvas-stage { min-height: 220px; }
   #coloring-canvas-host canvas { max-height: 55vh; }
+
+  .zoom-toolbar { gap: 10px; margin-top: 10px; }
+  .zoom-toolbar .tool-btn { min-width: 48px; min-height: 48px; }
 }
 
 /* Very narrow phones */
@@ -152,4 +155,11 @@
   .tool-btn { width: 44px; height: 44px; font-size: 16px; }
   .tool-btn small { display: none; }
   .color-grid { grid-template-columns: repeat(auto-fit, minmax(34px, 1fr)); grid-auto-rows: 34px; }
+
+  /* Short landscape screens: keep the zoom toolbar below the canvas (per
+     spec, this is the preferred placement at every size) but tighten its
+     margin so it doesn't eat into the already-scarce vertical space. */
+  .canvas-stage { padding-bottom: 6px; }
+  .zoom-toolbar { margin-top: 6px; gap: 8px; }
+  .zoom-toolbar .tool-btn { width: 44px; height: 44px; min-width: 44px; min-height: 44px; font-size: 16px; }
 }
