@@ -26,14 +26,46 @@ const PRAISE_PHRASES = [
 ];
 
 /* ---------------- Voice narration (kid-friendly, non-readers) ---------------- */
+/* All narrated text (picture titles, color names, praise phrases) is
+   hardcoded English. Without an explicit lang/voice, a device whose
+   system TTS default locale isn't English (e.g. a phone set to
+   Vietnamese) picks its default non-English voice to read that English
+   text — it comes out mangled and much quieter than a proper English
+   voice reading the same text, which is why phone vs. desktop sounded so
+   different. Force an English voice/lang explicitly so narration is
+   consistent everywhere. */
 const Voice = (() => {
+  let voices = [];
+
+  function refreshVoices() {
+    if ('speechSynthesis' in window) voices = window.speechSynthesis.getVoices();
+  }
+
+  if ('speechSynthesis' in window) {
+    refreshVoices();
+    // Voice list loads asynchronously on many mobile browsers — empty on
+    // the very first call until this fires.
+    window.speechSynthesis.onvoiceschanged = refreshVoices;
+  }
+
+  function pickEnglishVoice() {
+    if (!voices.length) refreshVoices();
+    if (!voices.length) return null;
+    const byLang = (prefix) => voices.find(v => v.lang && v.lang.toLowerCase().startsWith(prefix));
+    return byLang('en-us') || byLang('en-gb') || byLang('en') || null;
+  }
+
   function speak(text) {
     if (!AudioManager.isEnabled()) return;
     if (!('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
     const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'en-US';
     utter.rate = 0.9;
     utter.pitch = 1.15;
+    utter.volume = 1;
+    const voice = pickEnglishVoice();
+    if (voice) utter.voice = voice;
     window.speechSynthesis.speak(utter);
   }
   return { speak };
