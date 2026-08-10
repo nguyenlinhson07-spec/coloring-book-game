@@ -50,6 +50,29 @@ const App = (() => {
   let engine = null;
   let els = {};
 
+  /* ---------------- Autosave ---------------- */
+  /* Debounced save after each completed action (fill, stroke, undo/redo,
+     reset — engine.onChange fires after all of them), so progress survives
+     the mobile OS killing a backgrounded tab, not just an explicit Save tap
+     or navigation. Debounced (not per-pointer-move — onChange itself only
+     fires on completed actions) so a rapid burst of fills coalesces into
+     one localStorage write. Flushed immediately on visibilitychange/pagehide. */
+  let autosaveTimer = null;
+  function scheduleAutosave() {
+    if (autosaveTimer) clearTimeout(autosaveTimer);
+    autosaveTimer = setTimeout(() => {
+      autosaveTimer = null;
+      saveCurrentProgress(false);
+    }, 500);
+  }
+  function flushAutosave() {
+    if (autosaveTimer) {
+      clearTimeout(autosaveTimer);
+      autosaveTimer = null;
+      saveCurrentProgress(false);
+    }
+  }
+
   function qs(id) { return document.getElementById(id); }
 
   async function init() {
@@ -287,6 +310,21 @@ const App = (() => {
       AudioManager.click();
       showScreen('selection');
     });
+
+    /* Backgrounding (tab switch, phone locked, app-switch on mobile) must
+       not lose progress or keep audio/CPU busy for a screen the player
+       can't see. Resuming just continues normally — nothing to restart. */
+    document.addEventListener('visibilitychange', () => {
+      document.body.classList.toggle('page-hidden', document.hidden);
+      if (document.hidden) {
+        flushAutosave();
+        AudioManager.stopAmbient();
+      } else if (state.currentPageId && !els.screenEditor.classList.contains('hidden')) {
+        const page = ColoringData.getPageById(state.currentPageId);
+        if (page) AudioManager.startAmbient(page.category);
+      }
+    });
+    window.addEventListener('pagehide', flushAutosave);
   }
 
   function toggleSound() {
@@ -417,7 +455,7 @@ const App = (() => {
     if (!engine) {
       engine = new ColoringEngine({
         container: els.canvasHost,
-        onChange: () => {},
+        onChange: () => scheduleAutosave(),
         onComplete: () => celebrate(),
         onInvalidClick: () => AudioManager.invalid()
       });

@@ -6,7 +6,7 @@
    picture is opened (cache-first-then-network), meaning any picture the
    child has already colored keeps working offline, and new ones just
    need one online visit. */
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 const SHELL_CACHE = `coloring-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `coloring-runtime-${CACHE_VERSION}`;
 
@@ -35,10 +35,14 @@ self.addEventListener('install', (event) => {
     try {
       const res = await fetch('data/coloring-pages.json');
       const pages = await res.json();
-      const maskUrls = pages.flatMap(p => [p.mask, p.regionMap]).filter(Boolean);
-      await cache.addAll(maskUrls);
+      // Masks/region-maps are tiny and needed for the fill tool to work at
+      // all; thumbnails are small (~30-150KB each, ~2MB total) and make the
+      // picture-selection grid usable offline too. Full-resolution artwork
+      // stays out of precache (see file header) — cached on first open.
+      const urls = pages.flatMap(p => [p.mask, p.regionMap, p.thumbnail]).filter(Boolean);
+      await cache.addAll(urls);
     } catch (e) {
-      // offline install (rare) — masks will be cached at runtime instead.
+      // offline install (rare) — masks/thumbnails will be cached at runtime instead.
     }
     self.skipWaiting();
   })());

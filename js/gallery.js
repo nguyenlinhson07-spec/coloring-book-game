@@ -39,11 +39,12 @@ const Gallery = (() => {
     thumbWrap.innerHTML = '<div style="font-size:40px;">🖼️</div>';
     ColoringEngine.renderComposite(page.image, data.paintDataUrl)
       .then((canvas) => {
+        // Append the composited canvas directly — skips the extra
+        // toDataURL() encode + <img> decode round trip.
+        canvas.setAttribute('aria-label', page.title);
+        canvas.setAttribute('role', 'img');
         thumbWrap.innerHTML = '';
-        const img = document.createElement('img');
-        img.alt = page.title;
-        img.src = canvas.toDataURL();
-        thumbWrap.appendChild(img);
+        thumbWrap.appendChild(canvas);
       })
       .catch(() => {});
 

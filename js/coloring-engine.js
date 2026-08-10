@@ -29,6 +29,16 @@ class ColoringEngine {
   static MAX_HISTORY = 31;      // 30 undoable actions + the initial state
   static FIT_FRACTION = 0.88;   // artwork occupies ~88% of the canvas, aspect-ratio preserved
 
+  /* Device pixel ratio to render the (visible, display-only) canvas at, so
+     it stays sharp on Retina/high-DPI phones and tablets. Capped at 2 —
+     beyond that the sharpness gain is imperceptible but the backing-store
+     memory/fill-rate cost keeps growing, which matters on weaker Android
+     GPUs. Only affects the display canvas's backing resolution; the
+     logical drawing/region-map coordinate system stays 800x600. */
+  static effectiveDPR() {
+    return Math.min(window.devicePixelRatio || 1, 2);
+  }
+
   /* Contain-fit + center an image of natural size (imgW,imgH) inside the
      canvas, scaled so it occupies FIT_FRACTION of the available space, with
      no stretching/cropping. Must stay in lockstep with the identical
@@ -49,11 +59,19 @@ class ColoringEngine {
     this.onInvalidClick = onInvalidClick || (() => {});
 
     this.canvas = document.createElement('canvas');
-    this.canvas.width = ColoringEngine.W;
-    this.canvas.height = ColoringEngine.H;
+    const dpr = ColoringEngine.effectiveDPR();
+    this.canvas.width = ColoringEngine.W * dpr;
+    this.canvas.height = ColoringEngine.H * dpr;
     this.canvas.style.touchAction = 'none';
     this.canvas.style.background = '#ffffff';
-    this.ctx = this.canvas.getContext('2d', { willReadFrequently: true });
+    // No willReadFrequently here — unlike paintCtx below, this context is
+    // write-only (render()/_ripple() only draw/clear, never getImageData),
+    // so forcing the slower software-canvas path would just tax every
+    // frame for nothing, and now it's also DPR-scaled up to 2x.
+    this.ctx = this.canvas.getContext('2d');
+    // Backing store is dpr-scaled for sharpness; every draw call elsewhere
+    // in this file still uses the logical 800x600 coordinate space.
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     this.container.innerHTML = '';
     this.container.appendChild(this.canvas);
 
@@ -183,15 +201,28 @@ class ColoringEngine {
      gallery to show colored-in progress thumbnails and to export/download
      a saved-but-not-currently-open picture's progress as a clean PNG. Only
      needs the visible line art (built from raw pixels), not the hidden
-     region map. */
-  static async renderComposite(imageSrc, paintDataUrl) {
+     region map.
+
+     The line-art extraction (full-res decode + a 480,000-pixel scan) is
+     the expensive part and only depends on imageSrc, not on the player's
+     paint layer — so it's cached per picture. The gallery re-renders every
+     saved picture's composite each time the gallery screen opens; without
+     this, opening the gallery redid that decode+scan for every saved
+     picture on every visit. */
+  static _lineArtCache = new Map();
+  static _LINE_ART_CACHE_MAX = 12;
+
+  static async _getLineArtCanvas(imageSrc) {
+    if (ColoringEngine._lineArtCache.has(imageSrc)) {
+      return ColoringEngine._lineArtCache.get(imageSrc);
+    }
     const { W, H, DARK_THRESHOLD } = ColoringEngine;
     const img = await ColoringEngine.loadImage(imageSrc);
 
     const rect = ColoringEngine.fitRect(img.naturalWidth, img.naturalHeight);
     const srcCanvas = document.createElement('canvas');
     srcCanvas.width = W; srcCanvas.height = H;
-    const srcCtx = srcCanvas.getContext('2d');
+    const srcCtx = srcCanvas.getContext('2d', { willReadFrequently: true });
     srcCtx.fillStyle = '#ffffff';
     srcCtx.fillRect(0, 0, W, H);
     srcCtx.drawImage(img, rect.x, rect.y, rect.w, rect.h);
@@ -214,6 +245,18 @@ class ColoringEngine {
     const lineArtCanvas = document.createElement('canvas');
     lineArtCanvas.width = W; lineArtCanvas.height = H;
     lineArtCanvas.getContext('2d').putImageData(lineArt, 0, 0);
+
+    const cache = ColoringEngine._lineArtCache;
+    if (cache.size >= ColoringEngine._LINE_ART_CACHE_MAX) {
+      cache.delete(cache.keys().next().value); // drop oldest entry
+    }
+    cache.set(imageSrc, lineArtCanvas);
+    return lineArtCanvas;
+  }
+
+  static async renderComposite(imageSrc, paintDataUrl) {
+    const { W, H } = ColoringEngine;
+    const lineArtCanvas = await ColoringEngine._getLineArtCanvas(imageSrc);
 
     const out = document.createElement('canvas');
     out.width = W; out.height = H;
@@ -358,18 +401,41 @@ class ColoringEngine {
     this.render();
   }
 
+  /* Strokes are drawn into paintCtx immediately (cheap — 800x600) so pixel
+     data stays correct even under load, but the visible composite
+     (render(): clear + 2 drawImage calls) only needs to happen once per
+     displayed frame — batching it via rAF avoids redundant full-canvas
+     composites when a browser delivers several pointermove events per
+     frame (common on some Android WebViews). getCoalescedEvents recovers
+     the sub-frame samples the OS captured, so fast finger movement still
+     interpolates smoothly instead of getting chunky line segments. */
   _onPointerMove(e) {
     if (!this._drawing) return;
     e.preventDefault();
-    const p = this._canvasPoint(e);
-    this._drawLine(this._lastPoint, p);
-    this._lastPoint = p;
-    this.render();
+    const events = (typeof e.getCoalescedEvents === 'function' && e.getCoalescedEvents()) || [e];
+    for (const ev of events) {
+      const p = this._canvasPoint(ev);
+      const dx = p.x - this._lastPoint.x, dy = p.y - this._lastPoint.y;
+      if (dx * dx + dy * dy < 1.5) continue; // thin near-duplicate points
+      this._drawLine(this._lastPoint, p);
+      this._lastPoint = p;
+    }
+    this._scheduleRender();
+  }
+
+  _scheduleRender() {
+    if (this._renderScheduled) return;
+    this._renderScheduled = true;
+    requestAnimationFrame(() => {
+      this._renderScheduled = false;
+      this.render();
+    });
   }
 
   _onPointerUp() {
     if (!this._drawing) return;
     this._drawing = false;
+    this.render(); // flush immediately rather than waiting on a pending rAF
     this._pushHistory();
     this._updateCompletion(true);
     this._notifyChange();
