@@ -110,13 +110,23 @@ class ColoringEngine {
     this.pageId = pageData.id;
     this.completed = false;
 
+    const { W, H } = ColoringEngine;
     const img = await this._loadImage(pageData.image);
     const rect = ColoringEngine.fitRect(img.naturalWidth, img.naturalHeight);
-    this.ctx.clearRect(0, 0, ColoringEngine.W, ColoringEngine.H);
-    this.ctx.fillStyle = '#ffffff';
-    this.ctx.fillRect(0, 0, ColoringEngine.W, ColoringEngine.H);
-    this.ctx.drawImage(img, rect.x, rect.y, rect.w, rect.h);
-    const sourceData = this.ctx.getImageData(0, 0, ColoringEngine.W, ColoringEngine.H);
+    // Sample the source image on a dedicated, un-transformed 800x600 scratch
+    // canvas — NOT this.ctx. this.ctx's backing store is DPR-scaled (see
+    // effectiveDPR) with a matching ctx.setTransform(dpr,...), but
+    // getImageData always reads raw physical backing-store pixels and
+    // ignores that transform. Sampling straight off this.ctx at dpr>1 would
+    // only capture the top-left 1/dpr fraction of the drawn artwork —
+    // exactly the "zoomed in and cropped" bug this fixes.
+    const scratch = document.createElement('canvas');
+    scratch.width = W; scratch.height = H;
+    const scratchCtx = scratch.getContext('2d', { willReadFrequently: true });
+    scratchCtx.fillStyle = '#ffffff';
+    scratchCtx.fillRect(0, 0, W, H);
+    scratchCtx.drawImage(img, rect.x, rect.y, rect.w, rect.h);
+    const sourceData = scratchCtx.getImageData(0, 0, W, H);
     this._buildLineArt(sourceData);
 
     await this._loadRegionMap(pageData);

@@ -55,6 +55,9 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 
 .app-frame {
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +72,8 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 .rainbow-border {
   width: 100%;
   max-width: 1200px;
+  box-sizing: border-box;
+  min-width: 0;
   padding: 14px;
   border-radius: 40px;
   background: repeating-linear-gradient(
@@ -89,6 +94,9 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   border-radius: var(--panel-radius);
   padding: 24px 28px 32px;
   min-height: 80vh;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
@@ -151,6 +159,8 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   gap: 10px;
   justify-content: center;
   margin-bottom: 20px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .category-btn {
@@ -177,11 +187,18 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 }
 .category-btn.active .count { background: rgba(255,255,255,0.3); }
 
+/* min-width: 0 down this whole chain for the same reason as the editor
+   canvas (see the comment above .canvas-stage): thumbnail <img>/<canvas>
+   elements have an intrinsic bitmap size, and a grid/flex item's default
+   min-width:auto can fall back to that intrinsic size instead of the
+   percentage width we actually want — forcing the grid column (and the
+   whole page) wider than the viewport on phones. */
 .picture-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
   flex: 1;
+  min-width: 0;
 }
 
 .picture-card {
@@ -196,6 +213,8 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   box-shadow: 0 4px 14px rgba(43, 43, 61, 0.08);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   position: relative;
+  min-width: 0;
+  box-sizing: border-box;
 }
 .picture-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -207,6 +226,7 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 
 .picture-thumb {
   width: 100%;
+  min-width: 0;
   aspect-ratio: 4 / 3;
   background: #ffffff;
   border-radius: 16px;
@@ -224,6 +244,7 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 .picture-thumb canvas {
   width: 100%;
   height: 100%;
+  min-width: 0;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -296,6 +317,8 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   gap: 16px;
   flex: 1;
   min-height: 0;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .tool-rail {
@@ -303,6 +326,7 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  min-width: 0;
 }
 
 .tool-btn {
@@ -325,6 +349,18 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 }
 .brush-size-wrap input[type="range"] { width: 60px; }
 
+/* min-width: 0 on every level of this chain is load-bearing, not
+   decorative: the <canvas> element's width/height ATTRIBUTES (its
+   intrinsic size for CSS layout purposes) are now up to 1600x1200 — DPR-
+   scaled for Retina sharpness (see coloring-engine.js effectiveDPR) — even
+   though its CSS width is "100%". Flex/grid items default to
+   min-width:auto, which for a replaced element like <canvas> falls back to
+   that intrinsic size, NOT the CSS width. Without min-width:0 breaking
+   that fallback at every flex/grid level below, the 1600px intrinsic
+   width wins the layout fight on a ~390px phone: the grid column gets
+   forced wide, the canvas renders far larger than the viewport, and only
+   the left slice of it is visible — reading as "the artwork is zoomed in
+   and cropped" even though the actual draw/zoom math is untouched. */
 .canvas-stage {
   background: #f6f7fb;
   border-radius: 20px;
@@ -335,11 +371,14 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   overflow: hidden;
   position: relative;
   min-height: 400px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .canvas-viewport {
   width: 100%;
   height: 100%;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,6 +388,7 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 #coloring-canvas-host {
   width: 100%;
   height: 100%;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -359,6 +399,8 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 #coloring-canvas-host canvas {
   width: 100%;
   height: auto;
+  min-width: 0;
+  max-width: 100%;
   max-height: 70vh;
   aspect-ratio: 4 / 3;
   background: #ffffff;
@@ -369,6 +411,7 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-drag: none;
+  box-sizing: border-box;
 }
 
 .zoom-controls {
@@ -383,6 +426,8 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   flex-direction: column;
   gap: 14px;
   overflow-y: auto;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .panel-block {
@@ -390,6 +435,8 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   border-radius: 18px;
   padding: 12px;
   border: 2px solid #eee;
+  min-width: 0;
+  box-sizing: border-box;
 }
 .panel-title { font-weight: 800; font-size: 13px; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 0.5px; color: #7a7d94; }
 
@@ -431,9 +478,10 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 .editor-topbar {
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 14px; gap: 10px; flex-wrap: wrap;
+  min-width: 0; max-width: 100%;
 }
-.editor-topbar .title-block { font-weight: 800; font-size: 18px; }
-.editor-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.editor-topbar .title-block { font-weight: 800; font-size: 18px; min-width: 0; }
+.editor-actions { display: flex; gap: 8px; flex-wrap: wrap; min-width: 0; }
 
 /* ---------- Celebration ---------- */
 .celebration-overlay {
@@ -480,6 +528,7 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  min-width: 0;
 }
 .gallery-card {
   background: #fbfbff;
@@ -487,6 +536,8 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
   border: 3px solid #e4e6f2;
   padding: 12px;
   display: flex; flex-direction: column; gap: 8px;
+  min-width: 0;
+  box-sizing: border-box;
 }
 .gallery-card-actions { display: flex; gap: 6px; flex-wrap: wrap; }
 .gallery-card-actions button {
@@ -498,4 +549,4 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #fff; outlin
 }
 .empty-state { text-align: center; padding: 60px 20px; color: #9295ab; font-weight: 700; }
 
-.screen { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.screen { display: flex; flex-direction: column; flex: 1; min-height: 0; min-width: 0; }
