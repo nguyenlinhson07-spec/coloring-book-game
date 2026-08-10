@@ -38,14 +38,28 @@ const Voice = (() => {
   let voices = [];
 
   function refreshVoices() {
-    if ('speechSynthesis' in window) voices = window.speechSynthesis.getVoices();
+    if (!('speechSynthesis' in window)) return;
+    voices = window.speechSynthesis.getVoices();
+    if (voices.length && pollTimer) { clearInterval(pollTimer); pollTimer = null; }
   }
 
+  // The 'voiceschanged' event that's supposed to fire once the async voice
+  // list is ready doesn't fire reliably on every mobile browser — poll as a
+  // fallback for a few seconds after load so a late-loading voice list
+  // still gets picked up instead of silently falling back to the device's
+  // non-English system default forever.
+  let pollTimer = null;
   if ('speechSynthesis' in window) {
     refreshVoices();
-    // Voice list loads asynchronously on many mobile browsers — empty on
-    // the very first call until this fires.
     window.speechSynthesis.onvoiceschanged = refreshVoices;
+    if (!voices.length) {
+      let attempts = 0;
+      pollTimer = setInterval(() => {
+        attempts++;
+        refreshVoices();
+        if (voices.length || attempts > 20) { clearInterval(pollTimer); pollTimer = null; }
+      }, 250);
+    }
   }
 
   function pickEnglishVoice() {
