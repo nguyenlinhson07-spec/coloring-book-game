@@ -4,9 +4,6 @@ const ColoringData = (() => {
     { id: 'all', label: 'All' },
     { id: 'animals', label: 'Animals' },
     { id: 'dinosaurs', label: 'Dinosaurs' },
-    { id: 'vehicles', label: 'Vehicles' },
-    { id: 'fruits', label: 'Fruits' },
-    { id: 'fantasy', label: 'Fantasy' },
     { id: 'brainrot', label: 'Brainrot' }
   ];
 
